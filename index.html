@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price grid</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        section.container{
+            padding: 10vw;
+            box-shadow: 0 5px 10px 0 grey,0 5px 10px 0 grey;
+            border-radius: 10px;
+        }
+        .first{
+            padding: 5vw;
+            background-color: whitesmoke;
+        }
+        .first h2{
+            color: darkgreen;
+        }
+        .first h4{
+            color: limegreen;
+        }
+        .second{
+            padding: 5vw;
+            position: relative;
+            background-color: aqua;
+            color: whitesmoke;
+        }
+        .second button{
+            background-color: limegreen;
+            outline: none;
+            border-radius: 10px;
+            width: 40vw;
+            height: 5vh;
+            position: relative;
+            left: 10vw;
+            transition: all 0.5s;
+        }
+        .second button:hover{
+            background-color: white;
+        }
+        .thrid{
+            background-color: aquamarine;
+            padding: 5vw;
+            color: whitesmoke;
+        }
+        @media screen and (min-width:40em){
+            .container{
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+            }
+            .first{
+                grid-column: 1/3;
+            }
+            .second{
+                grid-column: 1/2;
+            }
+            .thrid{
+                grid-column: 2/3;
+            }
+            .second button{
+                left:1vw;
+                width: 15vw;
+            }
+        }
+        @media screen and (min-width:60em){
+            .first{
+                font-size: 1.5rem;
+            }
+            .second,.thrid{
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <article class="first">
+            <h2>Join our community</h2>
+            <br>
+            <h4>30 days,hassle-free money back guarantee</h4>
+            <p>
+                Gain access to our full library of tutorials along with apex code reviews.<br>
+                Perfect for all developers who are serious about honing their skills
+            </p>
+        </article>
+        <article class="second">
+            <h3>Monthly Subscription</h3><br>
+            <div>
+                <p>$29 <span>per month</span><br><br>
+                full acess for less than one dollar a day
+            </p><br>
+            <button>Sign up</button>
+            </div>
+        </article>
+        <article class="thrid">
+            <h3>Why Us</h3><br>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Necessitatibus qui perferendis ipsam non, 
+                debitis ratione modi expedita, r
+                <br>eprehenderit quas accusamus molestiae architecto impedit tempora<br>. Fuga explicabo culpa <br>aliquam<br> 
+                ea voluptatum.
+            </p>
+        </article>
+    </section>
+</body>
+</html>
