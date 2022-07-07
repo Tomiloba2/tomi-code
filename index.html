@@ -7,120 +7,132 @@
     <style>
         *{
             box-sizing: border-box;
-            margin:0;
+            margin: 0;
             padding: 0;
-         }
-         :root{
-            --color:burlywood;
-            --line-height:15px;
-         }
-         .container{
+        }
+        :root{
+        }
+        .container{
             position: relative;
             top: 5vw;
             left: 10vw;
-            width: 80vw;
-            padding:5vw;
-            line-height: 4vw;
+            max-width: 80vw;
+            padding: 2vw;
             box-shadow: 0 5px 10px 0 grey;
-         }
-         .toggle{
-            margin-left: 5vw;
-         }
-         .darkmode{
-            background-image:linear-gradient(45deg,grey,whitesmoke,grey) ;
-         }
-        .darkmode p,.darkmode h3{
-            font-weight: 500;
-            color: brown;
+            background-image: linear-gradient(45deg, rgb(128, 0, 128),rgb(204, 160, 204),rgb(87, 59, 87));
+            color: whitesmoke;
         }
-        .darkmode input[type='submit']{
-            background-color: brown;
-        }
-         .toggle span{
-            font-weight: 600;
-         }
-         div h3,div h4{
-            line-height: 40px;
-         }
-         h4{
-            padding-top:10px;
-            font-size: 5ch;
-         }
-         h3{
-            color:var(--color);
-            font-size: 5ch;
-         }
-         img{
-            min-height: 60vw;
-            max-width: 70vw;
-            padding-top: 5vw;
-         }
-         p{
-            color:var(--color);
-         }
-         input{
-            border-radius: 20px;
-            color: blue;
-            transition: all;
-         }
-        input[type='submit']{
-            background-color: burlywood;
-            width: 15vw;
+        .preview{
             position: relative;
-            left: -7vw;
+            top: -1vw;
+            font-size: 3ch;
         }
-        input:hover{
-            background-color: aqua;
+        .img1{
+            z-index: 1;
         }
-         @media screen and (min-width:40em){
+        .img2{
+            position: relative;
+            top: -5vw;
+            left: 9vw;
+            z-index: 2;
+        }
+        .second{
+            line-height: 30px;
+        }
+        .second h3{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 3ch;
+        }
+        .second button{
+            position: relative;
+            background-color: white;
+            color:rgb(128, 0, 128);
+            width: 20vw;
+            min-height: 5vw;
+            border-radius: 50px;
+            transition: all;
+        }
+        .second button:hover{
+            background-color:rgb(226, 213, 199);
+        }
+        .icon div{
+            display: inline-block;
+            padding-left: 3vw;
+        }
+        .icon img{
+            color: aliceblue;
+            border: 4px solid white;
+            border-radius: 30px;
+            max-width: 4ch;
+            min-height: 4ch;
+            position: relative;
+            top: -1vw;
+            left: 40vw;
+            transition: ease 0.5s;
+        }
+        .icon img:hover{
+            max-width: 5ch;
+            min-height: 5ch;
+        }
+        @media screen and (min-width:40em){
             .container{
-                line-height: var(--line-height);
                 display: grid;
                 grid-template-columns: auto auto;
             }
-            img{
-                position: relative;
-                top: -3vw;
-                max-width: 50vw;
-                min-height: 30vw;
+            .second{
+                padding-top: 3vw;
+                padding-left: 10vw;
+                line-height: 20px;
             }
-            input[type='submit']{
-                width: 5vw;
-                left: -3vw;
+            .second h3{
+                line-height: normal;
+                font-size: 4ch;
             }
-         }
+            .second button{
+                margin-top: 1vw;
+                max-width: 15vw;
+                min-height: 4vw;
+            }
+            p{
+                font-size:20px;
+            }
+        }
     </style>
-    <title>Base Apparell Coming Soon Page</title>
+    <title>Huddle Landing Page</title>
 </head>
 <body>
     <section class="container">
         <article class="first">
-            <div class="toggle">
-                <input type="checkbox"  id="checkbox" class='darkmode' onchange="dark()"><span>BASE<br>Apparell</span>
+            <div class="preview"><i>Huddle</i></div>
+            <div class="img1">
+                <img src="Asset/fash1.jpg" alt="fash1">
             </div>
-            <div>
-            <h3>WE &apos;RE</h3>
-            <h4>COMING <br>SOON</h4>
+            <!--second img-->
+            <div class="img2">
+                <img src="Asset/fash4.jpg" alt="fash4">
             </div>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem porro quasi, tempora pariatur 
-                <br>necessitatibus a in quisquam aut
-                <br> harum expedita accusantium corrupti cum cupiditate laudantium fugiat dignissimos
-            </p>
-            <form action="#">
-                <input type="email" name="email" id="email" placeholder="email address" style="padding:10px;">
-                <input type="submit" value="send" style="padding: 10px;">
-            </form>
         </article>
         <article class="second">
-            <img src="Asset/fash4.jpg" alt="fash4">
+            <h3>Bulid the community<br> your fans will love</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A rem deleniti architecto harum 
+                soluta est <br>
+                iure recusandae nulla, eaque excepturi illum sunt omnis saepe autem! Ut sapiente
+                 voluptas officia facilis.
+            </p>
+                <button>Registar</button>
         </article>
+        <footer class="icon">
+            <div class="facebook">
+                <img src="Asset/facebook.svg" alt="facebook icon" >
+            </div>
+            <div class="instagram">
+                <img src="Asset/instagram.svg" alt="instagram icon">
+            </div>
+            <div class="twitter">
+                <img src="Asset/twitter.svg" alt="twitter icon">
+            </div>
+        </footer>
     </section>
-    <script>
-        const dark=()=>{
-           var element= document.getElementsByClassName('container')[0];
-           element.classList.toggle("darkmode")
-        }
-    </script>
 </body>
 </html>
