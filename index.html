@@ -4,132 +4,149 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro Component With Sign-Up form</title>
+    <title>Pricing Component</title>
     <style>
+        :root{
+            --shadowbox:0 5px 10px 0 #f0f0f0,5px 0px 10px grey;
+        }
         *{
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
         .container{
-            width: 80vw;
-            margin: 10vw;
-            padding: 5vw;
-            background-color: peru;
+           max-width: 80vw;
+           margin: 10vw 10vw;
+           box-shadow: var(--shadowbox);
+           background: url();
         }
-        .first{
-            color: white;
-            padding-top: 5vw;
-        }
-        .first h3{
-            font-size: 4ch;
-        }
-        .first p{
-            line-height: 20px;
-        }
-        /*end of first*/
-        .second{
-            padding-top: 2vw;
-        }
-        .second .free{
-            padding-top: 2vw;
-            border: 1px groove skyblue;
-            border-radius: 15px;
-            background-color:rgb(2, 134, 90);
-            color: white;
+        main{
             text-align: center;
-            min-height: 5vw;
-        } 
-        .second .form{
-            background-color: white;
-            margin-top: 2vw;
-            border: 1px solid beige;
-            box-shadow: 0 5px 10px 0 grey;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
-        .form input:first-child{
-            margin-top: 20px;
-        }
-        .form input{
-            margin-left: 30px;
-            width: 50vw;
-            outline: none;
-            padding: 10px;
-            border-bottom: 1px solid navy;
+        input[type='checkbox']{
             border-radius: 20px;
-            box-shadow: 0 5px 10px  0 wheat;
+        }
+        article{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow:var(--shadowbox) ;
+            margin: 4vw;
+            padding:5vw;
+            text-align: center;
+        }
+        span{
+            font-size: 5ch;
+        }
+        button{
+            width: 50vw;
+            min-height: 5vh;
+            margin-top: 2vw;
+            color: white;
+            border-radius: 10px;
+            background-color: blueviolet;
             transition: ease 0.5s;
         }
-        .form input::placeholder{
-            color: red;
-            text-align: center;
-            font-size: 2ch;
+        button:hover{
+            color: blueviolet;
+            background-color: white;
         }
-        .form input:focus{
-            background-color: skyblue;
-        }
-        input[type='submit']{
-            background-color: limegreen;
+        .second{
+            padding-top: 5vw;
+            background-color: blueviolet;
             color: white;
-            border: none;
         }
-        .second .link{
-            padding-left: 30px;
+        .btn2{
+            background-color: white;
+            color:blueviolet;
+            transition: ease 0.5s;
         }
-        .link a{
-            color: red;
-            text-decoration: none;
+        .btn2:hover{
+            background-color: blueviolet;
+            color: white;
         }
-        a:visited{color: purple; }
-        a:hover{color: green;}
-        a:active{color: orange;}
-        @media screen and (min-width:40em){
+        @media screen and (min-width:45em){
             .container{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                margin: 2vw 2vw;
+                max-width: 120vw;
             }
-            .form input{
-                width: 30vw;
-                margin-left: 1vw;
-                margin-right: 1vw;
+            .grid{
+                display: grid;
+                grid-template-columns: 28vw 16vw 30vw;
+                justify-content: start;
+                align-content: center;
+            }
+            article{
+                width: 40vw;
+                margin: 1vw;
+                padding: 1vw;
             }
             .first{
+                width: 30vw;
+            }
+            .second{
+                width: 30vw;
+            }
+            .thrid{
+                width: 30vw;
                 position: relative;
-                top: -4vw;
+                left: 15vw;
+            }
+            button{
+                width: 20vw;
+            }
+        }
+        @media screen and (min-width:60em){
+            .grid{
+                grid-template-columns: 30vw 15vw 20vw;
+            }
+            article{
+                width: 30vw;
             }
         }
     </style>
 </head>
 <body>
-   <section class="container">
-    <article class="first">
-        <h3>Learn To Code By<br> Wathching Others</h3>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quo, provident enim vitae<br/>
-             repellendus aliquid beatae, hic explicabo magnam odio temporibus! Perspiciatis harum, quisq<br/>
-             uam eaque cumque expedita vero exercitationem veniam.
-        </p>
-    </article>
-    <article class="second">
-        <div class="free">
-            <p>
-                Try it free for 7days then $20/mo thereafter
-            </p>
-        </div>
-        <div class="form">
+    <section class="container">
+        <main class="preview">
+            <h2>Our Pricing</h2>
             <form action="#">
-                <input type="text" id="firstname" placeholder="Firstname" required/><br/><br/>
-                <input type="text" id="lastname" placeholder="Lastname" required/><br/><br/>
-                <input type="email" id="email" placeholder="Email address"/><br/><br/>
-                <input type="password" id="password" placeholder="Password"/><br/><br/>
-                <input type="submit" value="Claim your FREE trial now"/>
+                Annually
+                <input type="checkbox">
+                Monthly
             </form>
-            <div class="link">
-                By choosing to sign-up ,You are agreeing to our<br>
-                <a href="#">Terms and Conditions</a>
-            </div>
+        </main>
+        <div class="grid">
+        <article class="first">
+            <p>BASIC</p>
+            <h3>$<span>19.99</span></h3>
+               <br>
+               <hr style="color:white;">
+            <p>500GB storage</p><br><hr style="color:white;">
+            <p>2 Users Allowed</p><br><hr style="color:white;">
+            <p>Send up to 3GB</p><br><hr style="color:white;">
+            <button class="btn1">Learn more</button>
+        </article>
+        <article class="second">
+            <p>PROFESSIONAL</p>
+            <h3>$<span>29.99</span></h3>
+               <br>
+               <hr style="color:white;">
+            <p>1 TB storage</p><br><hr style="color:white;">
+            <p>5 Users Allowed</p><br><hr style="color:white;">
+            <p>Send up to 10GB</p><br><hr style="color:white;">
+            <button class="btn2">Learn more</button>
+        </article>
+        <article class="thrid">
+            <p>MASTER</p>
+            <h3>$<span>39.99</span></h3>
+               <br>
+               <hr style="color:white;">
+            <p>2 Tb storage</p><br><hr style="color:white;">
+            <p>10 Users Allowed</p><br><hr style="color:white;">
+            <p>Send up to 20GB</p><br><hr style="color:white;">
+            <button class="btn3">Learn more</button>
+        </article>
         </div>
-    </article>
-   </section> 
+    </section>
 </body>
 </html>
