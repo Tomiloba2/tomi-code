@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Component</title>
     <style>
+         .dark{
+           background-image: linear-gradient(45deg,grey,teal, black,teal,grey);
+         }
         :root{
             --shadowbox:0 5px 10px 0 #f0f0f0,5px 0px 10px grey;
         }
@@ -18,7 +21,7 @@
            max-width: 80vw;
            margin: 10vw 10vw;
            box-shadow: var(--shadowbox);
-           background: url();
+           background: url() no-repeat fixed center cover;
         }
         main{
             text-align: center;
@@ -50,10 +53,24 @@
             color: blueviolet;
             background-color: white;
         }
+        .first,.thrid{
+          background-color: white;
+          transition: 1s ease-in-out;
+        }
+        .first:hover{
+          transform: translateX(-3%);
+        }
+        .thrid:hover{
+          transform: translatex(4%);
+        }
         .second{
             padding-top: 5vw;
             background-color: blueviolet;
             color: white;
+            transition: all 1s ease-in;
+        }
+        .second:hover{
+          transform: translateY(3%);
         }
         .btn2{
             background-color: white;
@@ -107,6 +124,8 @@
 </head>
 <body>
     <section class="container">
+      darkmode
+      <input type="checkbox" name="dark" value="#" class="dark" onchange="darkmode()">
         <main class="preview">
             <h2>Our Pricing</h2>
             <form action="#">
@@ -148,5 +167,15 @@
         </article>
         </div>
     </section>
+    <script type="text/javascript">
+  //    var container=document.querySelector('#inputed');
+    //  container.addEventListner('change',()=>{
+      //  document.body.classList.toggle('dark')
+      //})
+      function darkmode(){
+        var element=document.querySelector('.container');
+        element.classList.toggle('dark')
+      }
+    </script>
 </body>
 </html>
